@@ -1,0 +1,38 @@
+{
+  "actorSpecification": 1,
+  "name": "event-organizer-leads",
+  "title": "Event Organizer Lead Extractor — Emails, LinkedIn & Websites from Luma & Eventbrite",
+  "description": "Extract organizer contact info (name, email, LinkedIn, website) from Luma and Eventbrite event pages. Input a list of event URLs or a search query — output a lead list ready for cold outreach. No API key needed.",
+  "version": "1.0",
+  "buildTag": "latest",
+  "categories": ["SCRAPING", "LEAD_GENERATION", "MARKETING"],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 3600,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": {
+      "actorSpecification": 1,
+      "title": "Event Leads",
+      "views": {
+        "overview": {
+          "title": "Leads",
+          "transformation": { "fields": ["organizerName", "organizerEmail", "organizerLinkedIn", "organizerWebsite", "eventName", "eventDate", "source"] },
+          "display": {
+            "component": "table",
+            "properties": {
+              "organizerName": { "label": "Organizer", "format": "text" },
+              "organizerEmail": { "label": "Email", "format": "text" },
+              "organizerLinkedIn": { "label": "LinkedIn", "format": "link" },
+              "organizerWebsite": { "label": "Website", "format": "link" },
+              "eventName": { "label": "Event", "format": "text" },
+              "eventDate": { "label": "Date", "format": "datetime" },
+              "source": { "label": "Source", "format": "text" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

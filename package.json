@@ -1,0 +1,22 @@
+{
+  "name": "apify-event-leads",
+  "version": "1.0.0",
+  "description": "Extract event organizer contact info (email, LinkedIn, website) from Luma and Eventbrite event pages for lead generation and outreach",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "node dist/main.js",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "apify": "^3.2.0",
+    "cheerio": "^1.0.0",
+    "playwright": "^1.44.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  }
+}

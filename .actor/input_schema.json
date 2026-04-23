@@ -1,0 +1,45 @@
+{
+  "actorSpecification": 1,
+  "title": "Event Organizer Lead Extractor Input",
+  "description": "Either provide a list of event URLs, or search for events by keyword and source.",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "eventUrls": {
+      "title": "Event URLs",
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of Luma or Eventbrite event page URLs to extract organizer info from. If provided, 'query' and 'source' are ignored.",
+      "editor": "json"
+    },
+    "query": {
+      "title": "Search keyword",
+      "type": "string",
+      "description": "Keywords to search for events (used when eventUrls is empty). E.g. 'AI startup San Francisco'.",
+      "editor": "textfield"
+    },
+    "source": {
+      "title": "Source platform",
+      "type": "string",
+      "enum": ["luma", "eventbrite", "both"],
+      "description": "Which platform to search when using keyword search mode.",
+      "default": "luma",
+      "editor": "select"
+    },
+    "city": {
+      "title": "City",
+      "type": "string",
+      "description": "City to filter events by (search mode only)",
+      "editor": "textfield"
+    },
+    "maxResults": {
+      "title": "Max leads",
+      "type": "integer",
+      "description": "Maximum number of organizer leads to extract. Default: 50.",
+      "default": 50,
+      "minimum": 1,
+      "maximum": 200,
+      "editor": "number"
+    }
+  }
+}
