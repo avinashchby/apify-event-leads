@@ -1,5 +1,4 @@
 {
-  "actorSpecification": 1,
   "title": "Event Organizer Lead Extractor Input",
   "description": "Either provide a list of event URLs, or search for events by keyword and source.",
   "type": "object",

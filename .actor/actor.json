@@ -1,7 +1,7 @@
 {
   "actorSpecification": 1,
   "name": "event-organizer-leads",
-  "title": "Event Organizer Lead Extractor — Emails, LinkedIn & Websites from Luma & Eventbrite",
+  "title": "Event Organizer Leads — Emails & LinkedIn from Luma",
   "description": "Extract organizer contact info (name, email, LinkedIn, website) from Luma and Eventbrite event pages. Input a list of event URLs or a search query — output a lead list ready for cold outreach. No API key needed.",
   "version": "1.0",
   "buildTag": "latest",
